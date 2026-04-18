@@ -23,7 +23,7 @@ importers:
 
   packages/chat:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -36,7 +36,7 @@ importers:
 
   packages/connections:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -58,7 +58,7 @@ importers:
 
   packages/kyc:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -71,7 +71,7 @@ importers:
 
   packages/listings:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -84,7 +84,7 @@ importers:
 
   packages/organization:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -97,28 +97,28 @@ importers:
 
   packages/sdk:
     dependencies:
-      '@zoniqx/sdk-chat':
+      '@apzoniqx/sdk-chat':
         specifier: workspace:*
         version: link:../chat
-      '@zoniqx/sdk-connections':
+      '@apzoniqx/sdk-connections':
         specifier: workspace:*
         version: link:../connections
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
-      '@zoniqx/sdk-kyc':
+      '@apzoniqx/sdk-kyc':
         specifier: workspace:*
         version: link:../kyc
-      '@zoniqx/sdk-listings':
+      '@apzoniqx/sdk-listings':
         specifier: workspace:*
         version: link:../listings
-      '@zoniqx/sdk-organization':
+      '@apzoniqx/sdk-organization':
         specifier: workspace:*
         version: link:../organization
-      '@zoniqx/sdk-transactions':
+      '@apzoniqx/sdk-transactions':
         specifier: workspace:*
         version: link:../transactions
-      '@zoniqx/sdk-wallet':
+      '@apzoniqx/sdk-wallet':
         specifier: workspace:*
         version: link:../wallet
     devDependencies:
@@ -131,7 +131,7 @@ importers:
 
   packages/transactions:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -144,7 +144,7 @@ importers:
 
   packages/wallet:
     dependencies:
-      '@zoniqx/sdk-core':
+      '@apzoniqx/sdk-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
