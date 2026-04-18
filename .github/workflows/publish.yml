@@ -16,33 +16,30 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://npm.pkg.github.com"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
+      - name: Configure pnpm for GitHub Packages
+        run: pnpm config set @zoniqx:registry https://npm.pkg.github.com
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build all packages
         run: pnpm build
-
-      - name: Create changeset version
-        run: pnpm changeset:version
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "chore: version packages [skip ci]"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
 
       - name: Publish to GitHub Packages
         run: pnpm changeset:publish
