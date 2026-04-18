@@ -1,6 +1,6 @@
 {
   "name": "@zoniqx/sdk-organization",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ZConnect SDK Organization - Organization and role management",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

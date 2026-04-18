@@ -1,6 +1,6 @@
 {
   "name": "@zoniqx/sdk-core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ZConnect SDK Core - Client, transport, auth, middleware, errors, pagination",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

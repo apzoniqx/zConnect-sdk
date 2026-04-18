@@ -1,6 +1,6 @@
 {
   "name": "@zoniqx/sdk-transactions",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ZConnect SDK Transactions - Buy and raw transaction broadcast",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

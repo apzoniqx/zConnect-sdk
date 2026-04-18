@@ -1,6 +1,6 @@
 {
   "name": "@zoniqx/sdk-kyc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ZConnect SDK KYC - KYC/KYB flows",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
