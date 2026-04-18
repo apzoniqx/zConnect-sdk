@@ -7,5 +7,5 @@ export default defineConfig({
   clean: true,
   sourcemap: true,
   bundle: false,
-  external: ["@apzoniqx/sdk-core"],
+  external: [],
 });

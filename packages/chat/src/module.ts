@@ -1,5 +1,5 @@
-import type { ZConnectClient } from '@apzoniqx/sdk-core';
-import * as operations from './operations/index.js';
+import type { ZConnectClient } from "../../core/src/index.js";
+import * as operations from "./operations/index.js";
 
 export class ChatModule {
   constructor(private client: ZConnectClient) {}
