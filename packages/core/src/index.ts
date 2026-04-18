@@ -1,0 +1,11 @@
+export { ZConnectClient } from './client.js';
+export type { ClientConfig, RetryConfig, SDKRequest, SDKResponse, Middleware, AuthProvider } from './types/config.js';
+export { ApiKeyAuth, BearerAuth } from './auth/interface.js';
+export { NativeFetchTransport } from './transport/http.js';
+export { compose } from './middleware/pipeline.js';
+export { withLogger } from './middleware/logger.js';
+export { withRetry } from './middleware/retry.js';
+export { withRateLimit } from './middleware/rate-limit.js';
+export { withIdempotencyKey } from './middleware/idempotency.js';
+export { ZConnectError, ApiError, AuthError, NotFoundError, RateLimitError, NetworkError } from './errors/base.js';
+export { paginate, type PaginatedResponse } from './pagination/paginator.js';

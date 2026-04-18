@@ -1,0 +1,33 @@
+{
+  "name": "@zoniqx/sdk",
+  "version": "0.0.0",
+  "description": "ZConnect SDK Umbrella - Composes all modules",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig.dts.json",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@zoniqx/sdk-core": "workspace:*",
+    "@zoniqx/sdk-listings": "workspace:*",
+    "@zoniqx/sdk-connections": "workspace:*",
+    "@zoniqx/sdk-transactions": "workspace:*",
+    "@zoniqx/sdk-kyc": "workspace:*",
+    "@zoniqx/sdk-wallet": "workspace:*",
+    "@zoniqx/sdk-organization": "workspace:*",
+    "@zoniqx/sdk-chat": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}

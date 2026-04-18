@@ -1,0 +1,49 @@
+name: Type Drift Check
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  type-drift-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate OpenAPI types
+        run: pnpm generate:types
+
+      - name: Check for type drift
+        run: |
+          if git diff --quiet packages/core/src/types/openapi-generated.ts; then
+            echo "✅ No type drift detected - SDK types are in sync with OpenAPI spec"
+          else
+            echo "❌ Type drift detected - SDK types are out of sync with OpenAPI spec"
+            echo ""
+            echo "The following changes were detected in openapi-generated.ts:"
+            git diff packages/core/src/types/openapi-generated.ts
+            echo ""
+            echo "To fix this:"
+            echo "1. Review the changes above"
+            echo "2. Update the SDK hand-crafted types in each module to match the new OpenAPI types"
+            echo "3. Commit the changes"
+            exit 1
+          fi
