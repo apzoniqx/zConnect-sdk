@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { ListListingsInput } from '../types/input.js';
 import type { ListingsListResponse } from '../types/output.js';
 

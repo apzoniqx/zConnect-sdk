@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { GetMarketplaceInput } from '../types/input.js';
 import type { MarketplaceListing } from '../types/output.js';
 

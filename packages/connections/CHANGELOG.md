@@ -1,4 +1,4 @@
-# @zoniqx/sdk-connections
+# @apzoniqx/sdk-connections
 
 ## 1.0.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [e6beae0]
-  - @zoniqx/sdk-core@1.0.0
+  - @apzoniqx/sdk-core@1.0.0

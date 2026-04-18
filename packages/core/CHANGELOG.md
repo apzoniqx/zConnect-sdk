@@ -1,4 +1,4 @@
-# @zoniqx/sdk-core
+# @apzoniqx/sdk-core
 
 ## 1.0.0
 

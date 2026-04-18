@@ -10,7 +10,18 @@
     "strict": true,
     "moduleResolution": "bundler",
     "target": "ES2022",
-    "module": "ESNext"
+    "module": "ESNext",
+    "baseUrl": "../../",
+    "paths": {
+      "@apzoniqx/sdk-core": ["./packages/core/src/index.ts"],
+      "@apzoniqx/sdk-listings": ["./packages/listings/src/index.ts"],
+      "@apzoniqx/sdk-connections": ["./packages/connections/src/index.ts"],
+      "@apzoniqx/sdk-transactions": ["./packages/transactions/src/index.ts"],
+      "@apzoniqx/sdk-kyc": ["./packages/kyc/src/index.ts"],
+      "@apzoniqx/sdk-wallet": ["./packages/wallet/src/index.ts"],
+      "@apzoniqx/sdk-organization": ["./packages/organization/src/index.ts"],
+      "@apzoniqx/sdk-chat": ["./packages/chat/src/index.ts"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

@@ -6,5 +6,5 @@ export default defineConfig({
   dts: false,
   clean: true,
   sourcemap: true,
-  external: ["@zoniqx/sdk-core"],
+  external: ["@apzoniqx/sdk-core"],
 });

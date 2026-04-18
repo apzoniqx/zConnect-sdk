@@ -31,7 +31,7 @@ jobs:
           version: 8
 
       - name: Configure pnpm for GitHub Packages
-        run: pnpm config set @zoniqx:registry https://npm.pkg.github.com
+        run: pnpm config set @apzoniqx:registry https://npm.pkg.github.com
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

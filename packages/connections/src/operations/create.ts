@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { CreateConnectionInput } from '../types/input.js';
 import type { Connection } from '../types/output.js';
 

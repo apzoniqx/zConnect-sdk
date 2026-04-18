@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { CreateOrganizationInput, UpdateOrganizationInput, ListOrganizationsInput } from '../types/input.js';
 import type { Organization, OrganizationsListResponse } from '../types/output.js';
 

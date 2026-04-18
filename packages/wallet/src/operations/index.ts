@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { CreateWalletInput, ListWalletsInput } from '../types/input.js';
 import type { Wallet, WalletsListResponse } from '../types/output.js';
 

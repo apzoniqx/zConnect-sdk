@@ -1,13 +1,13 @@
-export { ZConnectClient, ApiKeyAuth, BearerAuth } from "@zoniqx/sdk-core";
-import type { ClientConfig } from "@zoniqx/sdk-core";
-import { ListingsModule } from "@zoniqx/sdk-listings";
-import { TransactionsModule } from "@zoniqx/sdk-transactions";
-import { ConnectionsModule } from "@zoniqx/sdk-connections";
-import { KYCModule } from "@zoniqx/sdk-kyc";
-import { WalletModule } from "@zoniqx/sdk-wallet";
-import { OrganizationModule } from "@zoniqx/sdk-organization";
-import { ChatModule } from "@zoniqx/sdk-chat";
-import { ZConnectClient } from "@zoniqx/sdk-core";
+export { ZConnectClient, ApiKeyAuth, BearerAuth } from "@apzoniqx/sdk-core";
+import type { ClientConfig } from "@apzoniqx/sdk-core";
+import { ListingsModule } from "@apzoniqx/sdk-listings";
+import { TransactionsModule } from "@apzoniqx/sdk-transactions";
+import { ConnectionsModule } from "@apzoniqx/sdk-connections";
+import { KYCModule } from "@apzoniqx/sdk-kyc";
+import { WalletModule } from "@apzoniqx/sdk-wallet";
+import { OrganizationModule } from "@apzoniqx/sdk-organization";
+import { ChatModule } from "@apzoniqx/sdk-chat";
+import { ZConnectClient } from "@apzoniqx/sdk-core";
 
 export class ZConnectSDK extends ZConnectClient {
   public readonly listings: ListingsModule;

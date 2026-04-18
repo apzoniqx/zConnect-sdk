@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { InitiateKYCInput, ListKYCInput } from '../types/input.js';
 import type { KYCRequest, KYCListResponse } from '../types/output.js';
 

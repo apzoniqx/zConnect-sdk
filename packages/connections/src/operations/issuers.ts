@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { ListIssuersInput } from '../types/input.js';
 import type { IssuerWithConnectionStatus } from '../types/output.js';
 

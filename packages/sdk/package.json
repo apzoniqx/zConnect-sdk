@@ -1,15 +1,14 @@
 {
-  "name": "@zoniqx/sdk",
+  "name": "@apzoniqx/sdk",
   "version": "1.0.0",
   "description": "ZConnect SDK Umbrella - Composes all modules",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup && tsc -p tsconfig.dts.json",
+    "build": "tsup",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,14 +16,14 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@zoniqx/sdk-core": "workspace:*",
-    "@zoniqx/sdk-listings": "workspace:*",
-    "@zoniqx/sdk-connections": "workspace:*",
-    "@zoniqx/sdk-transactions": "workspace:*",
-    "@zoniqx/sdk-kyc": "workspace:*",
-    "@zoniqx/sdk-wallet": "workspace:*",
-    "@zoniqx/sdk-organization": "workspace:*",
-    "@zoniqx/sdk-chat": "workspace:*"
+    "@apzoniqx/sdk-core": "workspace:*",
+    "@apzoniqx/sdk-listings": "workspace:*",
+    "@apzoniqx/sdk-connections": "workspace:*",
+    "@apzoniqx/sdk-transactions": "workspace:*",
+    "@apzoniqx/sdk-kyc": "workspace:*",
+    "@apzoniqx/sdk-wallet": "workspace:*",
+    "@apzoniqx/sdk-organization": "workspace:*",
+    "@apzoniqx/sdk-chat": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.2",

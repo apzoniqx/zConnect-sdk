@@ -1,15 +1,14 @@
 {
-  "name": "@zoniqx/sdk-transactions",
+  "name": "@apzoniqx/sdk-transactions",
   "version": "1.0.0",
   "description": "ZConnect SDK Transactions - Buy and raw transaction broadcast",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup && tsc -p tsconfig.dts.json",
+    "build": "tsup",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +16,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@zoniqx/sdk-core": "workspace:*"
+    "@apzoniqx/sdk-core": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.2",

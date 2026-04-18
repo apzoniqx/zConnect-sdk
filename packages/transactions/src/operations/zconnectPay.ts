@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { ZconnectPayInput } from '../types/input.js';
 import type { Transaction } from '../types/output.js';
 

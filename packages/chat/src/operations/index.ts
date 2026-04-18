@@ -1,4 +1,4 @@
-import type { ZConnectClient } from '@zoniqx/sdk-core';
+import type { ZConnectClient } from '@apzoniqx/sdk-core';
 import type { CreateChatInput, SendMessageInput, ListChatsInput } from '../types/input.js';
 import type { Chat, Message, ChatsListResponse, MessagesListResponse } from '../types/output.js';
 

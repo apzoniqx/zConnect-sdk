@@ -1,15 +1,14 @@
 {
-  "name": "@zoniqx/sdk-core",
+  "name": "@apzoniqx/sdk-core",
   "version": "1.0.0",
   "description": "ZConnect SDK Core - Client, transport, auth, middleware, errors, pagination",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup && tsc -p tsconfig.dts.json",
+    "build": "tsup",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
