@@ -6,8 +6,8 @@ node_modules/
 dist/
 *.tsbuildinfo
 
-# Changesets
-.changeset/*.md
+# Changesets - keep the markdown files for versioning
+# .changeset/*.md
 # Keep config.json and README.md
 !.changeset/config.json
 !.changeset/README.md
