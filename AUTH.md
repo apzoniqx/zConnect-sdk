@@ -15,13 +15,13 @@ The ZConnect SDK supports multiple authentication methods through the `AuthProvi
 API keys are the simplest way to authenticate. Each API key is associated with a specific scope and permissions.
 
 ```typescript
-import { ZConnectSDK, ApiKeyAuth } from '@zoniqx/sdk';
+import { ZConnectSDK, ApiKeyAuth } from "@zoniqx/sdk";
 
 const sdk = new ZConnectSDK({
-  baseUrl: 'https://api.zoniqx.com',
-  auth: new ApiKeyAuth('your-api-key'),
-  tenantId: 'your-tenant-id', // Optional, for issuer-side operations
-  organizationId: 'your-org-id', // Optional, for organization-specific operations
+  baseUrl: "https://api.zoniqx.com",
+  auth: new ApiKeyAuth("your-api-key"),
+  tenantId: "your-tenant-id", // Optional, for issuer-side operations
+  organizationId: "your-org-id", // Optional, for organization-specific operations
 });
 ```
 
@@ -41,7 +41,7 @@ const sdk = new ZConnectSDK({
 
 ```typescript
 const sdk = new ZConnectSDK({
-  baseUrl: process.env.ZCONNECT_API_URL || 'https://api.zoniqx.com',
+  baseUrl: process.env.ZCONNECT_API_URL || "https://api.zoniqx.com",
   auth: new ApiKeyAuth(process.env.ZCONNECT_API_KEY),
 });
 ```
@@ -51,11 +51,11 @@ const sdk = new ZConnectSDK({
 JWT tokens are used for user authentication and provide temporary access.
 
 ```typescript
-import { ZConnectSDK, BearerAuth } from '@zoniqx/sdk';
+import { ZConnectSDK, BearerAuth } from "@zoniqx/sdk";
 
 const sdk = new ZConnectSDK({
-  baseUrl: 'https://api.zoniqx.com',
-  auth: new BearerAuth('your-jwt-token'),
+  baseUrl: "https://api.zoniqx.com",
+  auth: new BearerAuth("your-jwt-token"),
 });
 ```
 
@@ -74,7 +74,7 @@ The SDK does not automatically refresh JWT tokens. You'll need to implement toke
 ```typescript
 class RefreshingBearerAuth extends BearerAuth {
   constructor(private refreshToken: string) {
-    super('');
+    super("");
     this.refresh();
   }
 
@@ -99,7 +99,7 @@ class RefreshingBearerAuth extends BearerAuth {
 Implement the `AuthProvider` interface for custom authentication logic:
 
 ```typescript
-import type { AuthProvider } from '@zoniqx/sdk-core';
+import type { AuthProvider } from "@zoniqx/sdk-core";
 
 interface AuthProvider {
   getHeaders(): Promise<Record<string, string>>;
@@ -109,38 +109,35 @@ interface AuthProvider {
 ### Example: HMAC Authentication
 
 ```typescript
-import crypto from 'crypto';
-import type { AuthProvider } from '@zoniqx/sdk-core';
+import crypto from "crypto";
+import type { AuthProvider } from "@zoniqx/sdk-core";
 
 class HmacAuthProvider implements AuthProvider {
-  constructor(
-    private apiKey: string,
-    private apiSecret: string,
-  ) {}
+  constructor(private apiKey: string, private apiSecret: string) {}
 
   async getHeaders(): Promise<Record<string, string>> {
     const timestamp = Date.now().toString();
     const signature = this.generateSignature(timestamp);
 
     return {
-      'X-API-Key': this.apiKey,
-      'X-Timestamp': timestamp,
-      'X-Signature': signature,
+      "X-API-Key": this.apiKey,
+      "X-Timestamp": timestamp,
+      "X-Signature": signature,
     };
   }
 
   private generateSignature(timestamp: string): string {
     const message = timestamp;
     return crypto
-      .createHmac('sha256', this.apiSecret)
+      .createHmac("sha256", this.apiSecret)
       .update(message)
-      .digest('hex');
+      .digest("hex");
   }
 }
 
 const sdk = new ZConnectSDK({
-  baseUrl: 'https://api.zoniqx.com',
-  auth: new HmacAuthProvider('api-key', 'api-secret'),
+  baseUrl: "https://api.zoniqx.com",
+  auth: new HmacAuthProvider("api-key", "api-secret"),
 });
 ```
 
@@ -152,9 +149,9 @@ The `tenantId` is used for issuer-side operations and identifies the tenant (iss
 
 ```typescript
 const sdk = new ZConnectSDK({
-  baseUrl: 'https://api.zoniqx.com',
-  auth: new ApiKeyAuth('your-api-key'),
-  tenantId: 'ZONIQX_QA', // Your tenant ID
+  baseUrl: "https://api.zoniqx.com",
+  auth: new ApiKeyAuth("your-api-key"),
+  tenantId: "ZONIQX_QA", // Your tenant ID
 });
 ```
 
@@ -164,9 +161,9 @@ The `organizationId` is used for organization-specific operations and is sent as
 
 ```typescript
 const sdk = new ZConnectSDK({
-  baseUrl: 'https://api.zoniqx.com',
-  auth: new ApiKeyAuth('your-api-key'),
-  organizationId: 'org-id', // Your organization ID
+  baseUrl: "https://api.zoniqx.com",
+  auth: new ApiKeyAuth("your-api-key"),
+  organizationId: "org-id", // Your organization ID
 });
 ```
 
@@ -177,13 +174,13 @@ Both are optional and should only be provided when required by the specific API 
 The SDK provides an `AuthError` class for authentication-related errors:
 
 ```typescript
-import { AuthError } from '@zoniqx/sdk-core';
+import { AuthError } from "@zoniqx/sdk-core";
 
 try {
   await sdk.listings.list();
 } catch (error) {
   if (error instanceof AuthError) {
-    console.error('Authentication failed:', error.message);
+    console.error("Authentication failed:", error.message);
     // Handle authentication failure
   }
 }
